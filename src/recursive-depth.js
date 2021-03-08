@@ -13,6 +13,6 @@ module.exports = class DepthCalculator {
             Max = Math.max(Max, currentDepth)
         }
     })
-    return Max
+    return Max;
 }
 };
