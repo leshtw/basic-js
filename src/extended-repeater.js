@@ -1,4 +1,4 @@
-module.exports = function repeater(str = '', options) {
+module.exports = function repeater(str, options) {
   let pushStringArray = [];
   let addition;
 
