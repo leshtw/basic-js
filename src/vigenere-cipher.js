@@ -12,7 +12,7 @@ class VigenereCipheringMachine {
     key = key.toLowerCase();
     for (let i = 0; i < text.length; i++) {
     let  textSim = text[i];
-      if (keyIndex > key.length - 1) {
+      if (keyIndex >= key.length) {
         keyIndex = 0;
       }
       if (!this.alphabet.includes(textSim)) {
@@ -47,7 +47,7 @@ class VigenereCipheringMachine {
     key = key.toLowerCase();
     for (let i = 0; i < text.length; i++) {
     let  textSim = text[i];
-      if (keyIndex > key.length - 1) {
+      if (keyIndex >= key.length) {
         keyIndex = 0;
       }
       if (!this.alphabet.includes(textSim)) {
