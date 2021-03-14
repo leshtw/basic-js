@@ -6,21 +6,17 @@ const chainMaker= {
     // возвращает текущую длину цепочки в виде числа;
     return this.chainStorage.length;
   },
-  addLink(value){
-    // добавляет ссылку, содержащую stringпредставление элемента valueв цепочку;
-      if (value===undefined) {
-          value='( )';
-          this.chainStorage.push( value )
-      } else {
+  addLink(value = ''){
+    // добавляет ссылку, содержащую stringпредставление элемента value в цепочку;
           this.chainStorage.push('( ' + value +  ' )' )
-      }
-
       return this;
   },
+
   removeLink(position) {
     // удаляет звено цепи в указанном положении;
-      if (position < 0 || position===undefined) {
+      if (!this.chainStorage[position]){
         this.chainStorage = [];
+
           throw new Error
       }
       this.chainStorage.splice(position - 1,1);
@@ -28,11 +24,11 @@ const chainMaker= {
   },
  reverseChain() {
   // переворачивает цепочку;
-  this.chainStorage.reverse()
+  this.chainStorage.reverse();
   return this
  },
   finishChain() {
-    // заканчивается цепочка и returnsэтим.
+    // заканчивается цепочка и return
     let result  = this.chainStorage.join('~~');
      this.chainStorage=[];
      return  result;

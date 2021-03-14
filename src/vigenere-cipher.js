@@ -39,8 +39,7 @@ class VigenereCipheringMachine {
     return (this.type === true) ?  textChipher.toUpperCase(): textChipher.toUpperCase().split('').reverse().join('') ;
   }
 
-  decrypt(text, key) {
-    let resultIndex;
+  decrypt(text, key, resultIndex) {
     let textChipher = "";
     let keyIndex = 0;
     text = text.toLowerCase();
